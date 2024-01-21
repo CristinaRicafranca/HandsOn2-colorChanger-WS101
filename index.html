@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 70px;
+        }
+        body {        
+            place-items: center;
+            text-align: center;
+            padding-top: 100px;
+            color: black;
+            background-color: #a4dded;
+            display: grid;          
+            margin: 0; 
+        }
+        #kulay {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            margin-left: 50px;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
+        button {
+            height: 50px;
+            width: 100px;
+            background-color: #36454f;
+            font-weight: bolder;
+            font-size: 18px;
+            color:white;
+            border: 3px white;
+        }
+        section{
+            height: 300px;
+            width: 300px;
+            background-color:lightblue;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 20px;
+            place-items: center;
+            border-radius: 18px;
+            border:5px white solid ;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript colorChanger() Hands-on.</h1>
+    <section>
+        <div id="kulay"></div><br>
+        <button id="btn">Click Me</button>
+
+    </section>
+
+
+    <script>
+        const kulay = document.getElementById("kulay");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener('click', changeColor);
+
+        function changeColor() {
+            if (kulay.style.backgroundColor === "blue") {
+                kulay.style.backgroundColor = "green";
+            } else {
+                kulay.style.backgroundColor = "blue";
+            }
+        }
+    </script>
+</body>
+</html>
